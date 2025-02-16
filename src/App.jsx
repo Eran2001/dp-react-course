@@ -3,11 +3,11 @@ function App() {
     <>
       <h1 className="text-2xl font-bold underline">Hello</h1>
       <div className="main">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+        <div className="w-20 h-20 bg-amber-600">1</div>
+        <div className="w-20 h-20 bg-amber-600">2</div>
+        <div className="w-20 h-20 bg-amber-600">3</div>
+        <div className="w-20 h-20 bg-amber-600">4</div>
+        <div className="w-20 h-20 bg-amber-600">5</div>
       </div>
     </>
   );
