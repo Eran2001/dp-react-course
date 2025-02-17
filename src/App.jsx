@@ -12,7 +12,7 @@ function App() {
         await myPromise;
         console.log("Success");
       } catch (error) {
-        console.log("Failed");
+        console.log(error, "Failed");
       }
     };
 
