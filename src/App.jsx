@@ -14,7 +14,7 @@ function App() {
     console.log("Something Removed...");
   };
 
-  const userInput = Number(prompt("Enter your number: "));
+  const userInput = 1;
   if (userInput === 1) {
     openFile(addSomething);
   } else {
