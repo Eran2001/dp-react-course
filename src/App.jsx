@@ -1,15 +1,23 @@
-async function App() {
-  const myPromise = new Promise((resolve, reject) => {
-    resolve();
-    reject();
-  });
+import { useEffect } from "react";
 
-  try {
-    await myPromise;
-    console.log("Promise resolved successfully!");
-  } catch {
-    console.log("Promise was rejected!");
-  }
+function App() {
+  useEffect(() => {
+    const handlePromise = async () => {
+      const myPromise = new Promise((resolve, reject) => {
+        resolve();
+        // reject(); // Uncomment to test failure case
+      });
+
+      try {
+        await myPromise;
+        console.log("Success");
+      } catch (error) {
+        console.log("Failed");
+      }
+    };
+
+    handlePromise();
+  }, []);
 
   return (
     <>
