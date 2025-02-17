@@ -1,11 +1,13 @@
 function App() {
   function myFirst(callback) {
-    console.log("Hello");
     callback();
+    console.log("Hello");
   }
 
   function mySecond() {
-    console.log("Goodbye");
+    setTimeout(() => {
+      console.log("Goodbye");
+    }, 5000);
   }
 
   myFirst(mySecond);
