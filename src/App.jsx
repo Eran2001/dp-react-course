@@ -1,18 +1,18 @@
 function App() {
-  function openFile(callback) {
+  const openFile = (callback) => {
     setTimeout(() => {
       console.log("File Opened...");
       callback();
     }, 3000);
-  }
+  };
 
-  function addSomething() {
+  const addSomething = () => {
     console.log("Something Added...");
-  }
+  };
 
-  function removeSomething() {
+  const removeSomething = () => {
     console.log("Something Removed...");
-  }
+  };
 
   const userInput = Number(prompt("Enter your number: "));
   if (userInput === 1) {
