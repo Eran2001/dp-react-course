@@ -1,25 +1,17 @@
 function App() {
-  const openFile = (callback) => {
-    setTimeout(() => {
-      console.log("File Opened...");
-      callback();
-    }, 3000);
-  };
+  const myPromise = new Promise((resolve, reject) => {
+    resolve();
+    reject();
+  });
 
-  const addSomething = () => {
-    console.log("Something Added...");
-  };
-
-  const removeSomething = () => {
-    console.log("Something Removed...");
-  };
-
-  const userInput = 1;
-  if (userInput === 1) {
-    openFile(addSomething);
-  } else {
-    openFile(removeSomething);
-  }
+  myPromise.then(
+    () => {
+      console.log("Success");
+    },
+    () => {
+      console.log("Failed");
+    }
+  );
 
   return (
     <>
