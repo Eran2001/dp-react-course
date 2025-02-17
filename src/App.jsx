@@ -1,17 +1,15 @@
-function App() {
+async function App() {
   const myPromise = new Promise((resolve, reject) => {
     resolve();
     reject();
   });
 
-  myPromise.then(
-    () => {
-      console.log("Success");
-    },
-    () => {
-      console.log("Failed");
-    }
-  );
+  try {
+    await myPromise;
+    console.log("Promise resolved successfully!");
+  } catch {
+    console.log("Promise was rejected!");
+  }
 
   return (
     <>
