@@ -1,24 +1,14 @@
-import { useEffect } from "react";
-
 function App() {
-  useEffect(() => {
-    const handlePromise = async () => {
-      const myPromise = new Promise((resolve, reject) => {
-        resolve();
-        // reject(); // Uncomment to test failure case
-      });
+  function myFirst() {
+    console.log("Hello");
+  }
 
-      try {
-        await myPromise;
-        console.log("Success");
-      } catch (error) {
-        console.log(error, "Failed");
-      }
-    };
+  function mySecond() {
+    console.log("Goodbye");
+  }
 
-    handlePromise();
-  }, []);
-
+  myFirst();
+  mySecond();
   return (
     <>
       <h1 className="text-3xl font-bold underline">Hello</h1>
