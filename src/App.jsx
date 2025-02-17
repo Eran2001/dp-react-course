@@ -1,27 +1,25 @@
-import { useEffect } from "react";
-
 function App() {
-  async function openFile() {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log("File Opened...");
-        resolve();
-      }, 3000);
-    });
+  function openFile(callback) {
+    setTimeout(() => {
+      console.log("File Opened...");
+      callback();
+    }, 3000);
   }
 
-  async function addSomething() {
+  function addSomething() {
     console.log("Something Added...");
   }
 
-  useEffect(() => {
-    async function init() {
-      await openFile();
-      addSomething();
-    }
+  function removeSomething() {
+    console.log("Something Removed...");
+  }
 
-    init();
-  }, []);
+  const userInput = Number(prompt("Enter your number: "));
+  if (userInput === 1) {
+    openFile(addSomething);
+  } else {
+    openFile(removeSomething);
+  }
 
   return (
     <>
