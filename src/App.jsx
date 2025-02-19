@@ -1,25 +1,15 @@
 function App() {
-  const items = [
-    "apple",
-    "banana",
-    "cherry",
-    "date",
-    "elderberry",
-    "fig",
-    "grape",
-  ];
-
-  const myFunc = (arr) => {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-    return arr[randomIndex];
-  };
-
-  const randomItem = myFunc(items);
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const filteredNumbers = numbers.filter((number) => number % 2 == 0);
 
   return (
     <>
       <h1 className="text-3xl font-bold underline">Hello</h1>
-      <h2 className="text-2xl font-bold underline">{randomItem}</h2>
+      <ul>
+        {filteredNumbers.map((index, number) => (
+          <li key={index}>{number}</li>
+        ))}
+      </ul>
     </>
   );
 }
