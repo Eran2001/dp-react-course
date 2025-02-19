@@ -19,7 +19,9 @@ function App() {
   return (
     <>
       <h1 className="text-3xl font-bold underline">Hello</h1>
-      <h2 className="text-2xl font-bold line-through">{randomItem}</h2>
+      <h2 className="text-2xl font-bold underline underline-offset-1">
+        {randomItem}
+      </h2>
     </>
   );
 }
