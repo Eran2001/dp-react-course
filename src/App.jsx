@@ -11,6 +11,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setName(inputValue);
+    setInputValue("");
   };
 
   return (
@@ -23,6 +24,7 @@ function App() {
           name="name"
           placeholder="Type your name"
           className="border-2 border-black"
+          value={inputValue}
         />
         <input
           className="border-2 border-black block my-2 px-4 py-2"
