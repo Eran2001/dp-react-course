@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 flex flex-col justify-center items-center">
       <h2 className="text-3xl font-bold underline m-4">
         Hello {submittedData.name || "Guest"}
       </h2>
