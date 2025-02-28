@@ -8,6 +8,7 @@ function App() {
       <h2 className="text-3xl font-bold">
         {/* {isLoggedIn ? "Welcome back, User!" : "Please log in"} */}
         {isLoggedIn && "Welcome back, User!"}
+        {!isLoggedIn && "Please log in"}
       </h2>
       <button
         onClick={() => setIsLoggedIn(!isLoggedIn)}
