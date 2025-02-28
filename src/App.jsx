@@ -1,6 +1,6 @@
 function App() {
-  const handleChange = () => {
-    console.log("Changed");
+  const handleChange = (e) => {
+    console.log(e.target.value);
   };
 
   return (
