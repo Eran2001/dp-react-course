@@ -1,13 +1,23 @@
-import animals from "./animals";
+import { useState } from "react";
 
 function App() {
-  const [cat, dog] = animals;
+  const [over, isOver] = useState(false);
+
+  const onOver = () => {
+    isOver(!over);
+  };
 
   return (
     <div className="">
       <h2 className="text-3xl font-bold underline m-4">Hello</h2>
-      <h3>{JSON.stringify(cat)}</h3>
-      <h3>{JSON.stringify(dog)}</h3>
+      <button
+        onMouseOver={onOver}
+        className={`cursor-pointer border-2 border-black m-4 px-4 py-2 ${
+          isOver ? "bg-black text-white" : "bg-white text-black"
+        }  `}
+      >
+        Submit
+      </button>
     </div>
   );
 }
