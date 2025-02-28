@@ -25,7 +25,7 @@ function App() {
           className="border-2 border-black"
         />
         <input
-          className="border-2 border-black block my-2"
+          className="border-2 border-black block my-2 px-4 py-2"
           type="submit"
           name="submit"
           value="Submit"
