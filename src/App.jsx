@@ -1,11 +1,15 @@
+import { useState } from "react";
+
 function App() {
+  const [name, setName] = useState("");
+
   const handleChange = (e) => {
-    console.log(e.target.value);
+    setName(e.target.value);
   };
 
   return (
     <div className="">
-      <h2 className="text-3xl font-bold underline m-4">Form</h2>
+      <h2 className="text-3xl font-bold underline m-4">Hello {name}</h2>
       <input
         onChange={handleChange}
         type="text"
