@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 function App() {
-  const day = new Date().toLocaleTimeString();
-  console.log(day);
+  const now = new Date().toLocaleTimeString();
+
+  const [time, setTime] = useState(now);
+
+  console.log(now);
 
   return (
     <div className="">
