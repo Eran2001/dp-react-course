@@ -4,7 +4,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
-    <div className="m-4 p-6 border-2 border-black">
+    <div className="m-4 p-6 border-2 border-black flex flex-col justify-center items-center">
       <h2 className="text-3xl font-bold">
         {isLoggedIn ? "Welcome back, User!" : "Please log in"}
       </h2>
