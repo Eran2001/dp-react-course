@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="m-4 p-6 border-2 border-black flex flex-col justify-center items-center">
       <h2 className="text-3xl font-bold">
-        {isLoggedIn ? "Welcome back, User!" : "Please log in"}
+        {/* {isLoggedIn ? "Welcome back, User!" : "Please log in"} */}
+        {isLoggedIn && "Welcome back, User!"}
       </h2>
       <button
         onClick={() => setIsLoggedIn(!isLoggedIn)}
