@@ -1,9 +1,13 @@
 import animals from "./animals";
 
 function App() {
-  const [x, y] = animals;
-  console.log(x.sound);
-  console.log(y.sound);
+  const [cat, dog] = animals;
+  console.log(cat.sound);
+  console.log(dog.sound);
+
+  const { name: catName, sound: catSound } = cat;
+  console.log(catName);
+  console.log(catSound);
 
   return (
     <div className="">
