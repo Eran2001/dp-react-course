@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
-    <>
-      <h2 className="text-xl font-bold">
+    <div className="m-4 p-6 border-2 border-black">
+      <h2 className="text-3xl font-bold">
         {isLoggedIn ? "Welcome back, User!" : "Please log in"}
       </h2>
       <button
@@ -14,7 +14,7 @@ function App() {
       >
         Toggle Message
       </button>
-    </>
+    </div>
   );
 }
 
