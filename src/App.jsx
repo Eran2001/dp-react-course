@@ -2,21 +2,35 @@ import { useState } from "react";
 
 function App() {
   const [name, setName] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e) => {
-    setName(e.target.value);
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setName(inputValue);
   };
 
   return (
     <div className="">
       <h2 className="text-3xl font-bold underline m-4">Hello {name}</h2>
-      <input
-        onChange={handleChange}
-        type="text"
-        name="name"
-        placeholder="Type your name"
-        className="border-2 border-black"
-      />
+      <form onSubmit={handleSubmit} className="border-2 border-black p-4">
+        <input
+          onChange={handleChange}
+          type="text"
+          name="name"
+          placeholder="Type your name"
+          className="border-2 border-black"
+        />
+        <input
+          className="border-2 border-black block my-2"
+          type="submit"
+          name="submit"
+          value="Submit"
+        />
+      </form>
     </div>
   );
 }
