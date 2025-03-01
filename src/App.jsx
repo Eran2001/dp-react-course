@@ -7,7 +7,7 @@ const App = () => {
   });
 
   const changeFullName = (e) => {
-    setFullName(e.target.value);
+    setFullName({ ...fullname, [e.target.name]: e.target.value });
   };
 
   return (
