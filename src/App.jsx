@@ -9,7 +9,7 @@ const App = () => {
   };
 
   const changeLName = (e) => {
-    setFName(e.target.value);
+    setLName(e.target.value);
   };
 
   return (
@@ -32,7 +32,7 @@ const App = () => {
         onChange={changeLName}
       />
       <input
-        className="border-2 border-amber-50 text-center text-green-500 bg-white px-4 py-2 mt-2 w-54"
+        className="border-2 border-amber-50 text-center text-green-700 bg-white px-4 py-2 mt-2 w-54"
         type="submit"
         value="Submit"
       />
