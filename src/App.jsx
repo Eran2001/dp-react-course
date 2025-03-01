@@ -1,46 +1,7 @@
-import { useState } from "react";
-
 const App = () => {
-  const [fullname, setFullName] = useState({
-    fName: "",
-    lName: "",
-  });
-
-  const changeFullName = (e) => {
-    const { value, name } = e.target;
-
-    setFullName((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-green-600">
-      <h1 className="text-4xl text-white">
-        Hello {fullname.fName} {fullname.lName}
-      </h1>
-      <input
-        className="border-2 border-amber-50 text-center px-4 py-2 mt-2"
-        type="text"
-        name="fName"
-        placeholder="First Name"
-        onChange={changeFullName}
-        value={fullname.fName}
-      />
-      <input
-        className="border-2 border-amber-50 text-center px-4 py-2 mt-2"
-        type="text"
-        name="lName"
-        placeholder="Last Name"
-        onChange={changeFullName}
-        value={fullname.lName}
-      />
-      <input
-        className="border-2 border-amber-50 text-center text-green-700 bg-white px-4 py-2 mt-2 w-54"
-        type="submit"
-        value="Submit"
-      />
+    <div>
+      <h1 className="text-4xl text-white">Hello</h1>
     </div>
   );
 };
