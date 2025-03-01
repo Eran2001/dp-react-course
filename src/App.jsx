@@ -23,6 +23,7 @@ const App = () => {
         name="fname"
         placeholder="First Name"
         onChange={changeFName}
+        value={fname}
       />
       <input
         className="border-2 border-amber-50 text-center px-4 py-2 mt-2"
@@ -30,6 +31,7 @@ const App = () => {
         name="lname"
         placeholder="Last Name"
         onChange={changeLName}
+        value={lname}
       />
       <input
         className="border-2 border-amber-50 text-center text-green-700 bg-white px-4 py-2 mt-2 w-54"
