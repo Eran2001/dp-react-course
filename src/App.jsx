@@ -7,7 +7,21 @@ const App = () => {
   });
 
   const changeFullName = (e) => {
-    setFullName({ ...fullname, [e.target.name]: e.target.value });
+    const { value, name } = e.target;
+
+    setFullName((prev) => {
+      if (name === "fName") {
+        return {
+          fName: value,
+          lName: prev.lName,
+        };
+      } else if (name === "lName") {
+        return {
+          fName: prev.fName,
+          lName: value,
+        };
+      }
+    });
   };
 
   return (
@@ -18,7 +32,7 @@ const App = () => {
       <input
         className="border-2 border-amber-50 text-center px-4 py-2 mt-2"
         type="text"
-        name="fname"
+        name="fName"
         placeholder="First Name"
         onChange={changeFullName}
         value={fullname.fName}
@@ -26,7 +40,7 @@ const App = () => {
       <input
         className="border-2 border-amber-50 text-center px-4 py-2 mt-2"
         type="text"
-        name="lname"
+        name="lName"
         placeholder="Last Name"
         onChange={changeFullName}
         value={fullname.lName}
