@@ -9,19 +9,10 @@ const App = () => {
   const changeFullName = (e) => {
     const { value, name } = e.target;
 
-    setFullName((prev) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prev.lName,
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prev.fName,
-          lName: value,
-        };
-      }
-    });
+    setFullName((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
